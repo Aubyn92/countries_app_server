@@ -1,2 +1,5 @@
 Country.create(name: "Italy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", airline: "Delta", year: 2017)
 Country.create(name: "Canada", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", airline: "Air NZ", year: 2017)
+Country.create(name: "United States", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", airline: "Air NZ", year: 2017)
+Country.create(name: "Vietnam", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", airline: "Air Asia", year: 2017)
+Country.create(name: "Cambodia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", airline: "Air Asia", year: 2017)

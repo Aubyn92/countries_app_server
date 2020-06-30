@@ -12,17 +12,24 @@ class CountriesController < ApplicationController
 
     def create 
         Country.create(country_params)
-        render json: "country created", status: :created 
+        if(country.save)
+          render header: :created
+        else 
+          render json: {error: country.errors.full_messages}, status: :unprocessable_entity
+        end
     end 
 
     def update 
-        @country.update(country_params)
-        render json: "country updated", status: 200
+        if @country.update(country_params)
+          render status: :no_content
+        else
+            render json: {error: @trip.errors.full_messages}, status: :unprocessable_entity
+        end
     end 
 
     def destroy
-        @country.destroy
-        render json: "country deleted", status: 200
+        @country.delete
+        render status: :no_content
     end 
 
     private 
