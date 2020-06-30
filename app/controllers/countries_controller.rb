@@ -2,8 +2,8 @@ class CountriesController < ApplicationController
     before_action :set_country, only: [:show, :update, :destroy]
 
     def index 
-        @countries = Country.all
-        render json: @countries
+        countries = Country.all.order(id: "asc")
+        render json: countries
       end 
     
     def show 
@@ -12,7 +12,7 @@ class CountriesController < ApplicationController
 
     def create 
         Country.create(country_params)
-        render json: "country created", status: 201 
+        render json: "country created", status: :created 
     end 
 
     def update 
